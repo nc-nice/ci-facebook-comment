@@ -1,0 +1,17 @@
+/**
+ * TequilaRapido Facebook Component for CodeIgniter
+ *
+ * Intregrate Facebook comment in your CodeIngniter easly with the module
+ * TEQ_FacebookComponent by TequilaRapido.
+ *
+ * @access       public
+ * @author       TequilaRapido <author@email>
+ * @copyright    TequilaRapido 2011
+ * @example      /path/to/example
+ * @exception    Javadoc-compatible, use as needed
+ * @link         URL
+ * @magic        phpdoc.de compatibility
+ * @package      teq
+ * @since        02/2011
+ * @version      1.0
+ */
