@@ -1,0 +1,249 @@
+/**
+ * TequilaRapido Facebook Component for CodeIgniter
+ *
+ * Intregrate Facebook comment in your CodeIngniter easly with the module
+ * TEQ_FacebookComponent by TequilaRapido.
+ *
+ * @access       public
+ * @author       TequilaRapido <author@email>
+ * @copyright    TequilaRapido 2011
+ * @example      /path/to/example
+ * @exception    Javadoc-compatible, use as needed
+ * @link         URL
+ * @magic        phpdoc.de compatibility
+ * @package      teq
+ * @since        02/2011
+ * @version      1.0
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nodisplay {
+    display: none;
+}
+
+img {
+    border: 0 none;
+}
+
+.container {
+    width:400px;
+    margin: auto;
+}
+
+.clear {
+    clear: both;
+}
+
+div.teq-comments {
+    color: #333333;
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: 11px;
+    text-align: left;
+}
+
+div.teq-comments ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 398px;
+}
+
+div.teq-comments li.teq-comment-item {
+    background-color: #EDEFF4;
+    border-bottom: 0 solid #E5EAF1;
+    border-width: 1px 0 0;
+    margin-top: 2px;
+    padding: 5px 5px 6px;
+}
+
+div.teq-comments li.teq-comment-addcomment {
+    background-color: #EDEFF4;
+    border-bottom: 0 solid #E5EAF1;
+    border-width: 1px 0 0;
+    margin-top: 2px;
+    padding: 5px 5px 4px;
+}
+
+div.teq-comments li.teq-comment-item div.teq-comment-item-container {
+    word-wrap: break-word;
+}
+
+div.teq-comments div.teq-comment-item-delete {
+    cursor: pointer;
+    float: right;
+}
+
+div.teq-comments a.teq-comment-item-delete-btn {
+    color: #9E0226;
+    height: 15px;
+    margin: 0;
+    vertical-align: top;
+}
+
+div.teq-comments div.teq-comment-gravatar {
+    float: left;
+    margin-right: 8px;
+}
+
+div.teq-comments img.teq-comment-gravatar-img {
+    border: 0 none;
+    height: 32px;
+    width: 32px;
+}
+
+
+div.teq-comments img.teq-addcomment-gravatar-img {
+    border: 0 none;
+    float: left;
+    height: 32px;
+    margin-right: 6px;
+    width: 32px;
+}
+
+div.teq-comments .teq-comment-bloc {
+    padding-top: 1px;
+}
+
+div.teq-comments .teq-comment-name {
+    color: #0A2D4D;
+    font-weight: bold;
+    padding-top: 1px;
+}
+
+div.teq-comments .teq-comment-date {
+    color: #808080;
+    font-size: 11px;
+    line-height: 14px;
+    padding-top: 2px;
+}
+
+div.teq-comments .teq-comment-area {
+    padding: 0 !important;
+}
+
+div.teq-comments .teq-comment-box {
+    padding: 0 8px 0 0;
+}
+
+div.teq-comments .teq-comment-box textarea {
+    -moz-border-radius: 0 0 0 0;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #BDC7D8;
+    color: #777777;
+    display: block;
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: 11px;
+    height: 22px;
+    margin: 0;
+    padding: 3px;
+    width: 100%;
+}
+
+div.teq-comments label.teq-comment-btn {
+    float: right;
+    width: auto;
+}
+
+div.teq-comments label.teq-comment-btn input {
+    margin-right: 0;
+    margin-top: 3px;
+}
+
+fieldset, input, textarea, select, a.button, .meta ul li a, ul.nav li li a:hover, p.main input, input.login, table, .message, #easyTooltip, div.wysiwyg {
+    -moz-border-radius: 5px 5px 5px 5px;
+}
+
+input, textarea, select, button {
+    background: url("images/input.png") repeat-x scroll 0 0 transparent;
+    border: 1px solid #F0F0F0;
+    color: #555555;
+}
+
+input, textarea, select, button {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.tipsy {
+    padding: 5px;
+    font-size: 10px;
+    position: absolute;
+    z-index: 100000;
+}
+
+.tipsy-inner { 
+    padding: 5px 8px 4px 8px;
+    background-color: black;
+    color: white;
+    max-width: 200px;
+    text-align: center;
+}
+
+.tipsy-inner { 
+    border-radius: 3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+
+.tipsy-arrow {
+    position: absolute;
+    background: url('images/tipsy.gif') no-repeat top left;
+    width: 9px;
+    height: 5px;
+}
+
+.tipsy-n .tipsy-arrow { 
+    top: 0;
+    left: 50%;
+    margin-left: -4px;
+}
+
+.tipsy-nw .tipsy-arrow {
+    top: 0;
+    left: 10px;
+}
+
+.tipsy-ne .tipsy-arrow {
+    top: 0;
+    right: 10px;
+}
+
+.tipsy-s .tipsy-arrow {
+    bottom: 0;
+    left: 50%;
+    margin-left: -4px;
+    background-position: bottom left;
+}
+
+.tipsy-sw .tipsy-arrow { 
+    bottom: 0;
+    left: 10px;
+    background-position: bottom left;
+}
+
+.tipsy-se .tipsy-arrow { 
+    bottom: 0;
+    right: 10px;
+    background-position: bottom left;
+}
+
+.tipsy-e .tipsy-arrow {
+    top: 50%;
+    margin-top: -4px;
+    right: 0;
+    width: 5px;
+    height: 9px;
+    background-position: top right;
+}
+
+.tipsy-w .tipsy-arrow { 
+    top: 50%;
+    margin-top: -4px;
+    left: 0;
+    width: 5px;
+    height: 9px; 
+}
